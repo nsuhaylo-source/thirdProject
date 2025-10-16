@@ -34,7 +34,7 @@
           <h1 class="title">Safo<br>Dushanbe</h1>
           <div class="stars" aria-label="4 звезды">★★★★</div>
           <p class="subtitle">Роскошный 4-звёздочный отель в центре Душанбе</p>
-          <a class="btn" href="#">Забронировать</a>
+          <a class="btn" id="bookBtn" href="#">Забронировать</a>
         </div>
       </div>
 
@@ -75,7 +75,7 @@
       <div>
         <h4>Контакты</h4>
         <ul>
-          <li>Телефон: +992 48 701 3000</li>
+          <li>Телефон: +992 48 701 3000 <br> +992 48 701 9000</li>
           <li>Gmail: safohotel1@gmail.com</li>
           <li>Адрес: Саид Носир 25</li>
         </ul>
@@ -83,6 +83,40 @@
     </div>
     <div class="footer-copy">© 2025 Safo Dushanbe</div>
   </footer>
+
+
+<div class="modal" id="bookingModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Бронирование</h2>
+
+
+    <label for="roomSelect">Выберите номер:</label>
+    <select id="roomSelect">
+      <option value="single">Single Room - $75</option>
+      <option value="standard">Standard Room - $85</option>
+      <option value="deluxe">Deluxe Room - $130</option>
+      <option value="twin">Twin Room - $145</option>
+      <option value="suite">Suite Room - $150</option>
+      <option value="family">Family Suite - $175</option>
+      <option value="president">President Room - $1550</option>
+    </select>
+
+
+    <div class="counter">
+      <button id="minusDay">-</button>
+      <span id="days">1</span> день
+      <button id="plusDay">+</button>
+    </div>
+
+
+    <p>Общая стоимость: <span id="totalPrice">$0</span></p>
+
+
+    <button id="confirmBooking" class="btn">Забронировать</button>
+  </div>
+</div>
+<script src="script.js"></script>
 
 </body>
 </html>
