@@ -283,6 +283,26 @@ body {
   font-size: 16px;
 }
 
+
+#roomSelect{
+  background: #f7efde;
+  color: #372c22;
+  border: 1px solid #b79e80;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+
+#roomSelect option{
+  background: #f7efde;
+  color: #372c22;
+}
+
+
+#roomSelect option:checked{
+  background: #ad9d80a7;
+}
+
 #totalPrice {
   font-size: 20px;
   color: #6b533c;
