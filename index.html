@@ -42,7 +42,7 @@
         <p>
           Уютный и комфортный отель, открыт в 2021 году. Тихая улица, удобная локация,
           внимательный персонал и вкусные завтраки. Отличный выбор для отдыха и деловых поездок.
-          Мы заботимся о том чтобы вы почувствовали себя как дома. 
+          Мы заботимся о том чтобы вы чувствовали себя как дома! 
         </p>
 
         <ul class="facts">
@@ -115,6 +115,56 @@
 
     <button id="confirmBooking" class="btn">Забронировать</button>
   </div>
+</div>
+
+
+<!-- модалка -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="authClose">&times;</span>
+    <h2 id="authTitle">Личный кабинет</h2>
+
+
+    <div id="authNotRegistered">
+      <p>Вы ещё не зарегистрированы.</p>
+      <button type="button" id="openRegister" class="btn">Регистрация</button>
+    </div>
+
+
+    <form id="registerForm" style="display:none;">
+      <div class="form-group">
+        <label for="regFullname">ФИО</label>
+        <input id="regFullname" type="text" required placeholder="Jason Michael Statham">
+      </div>
+
+      <div class="form-group">
+        <label for="regPhone">Телефон</label>
+        <input id="regPhone" type="tel" required placeholder="+992 999 99 00 00">
+      </div>
+
+      <div class="form-group">
+        <label for="regEmail">Gmail</label>
+        <input id="regEmail" type="email" required placeholder="your@gmail.com">
+      </div>
+
+      <div class="form-group">
+        <label for="regPass">Пароль</label>
+        <input id="regPass" type="password" required placeholder="Минимум 8 символов">
+        <div id="passHelp" class="form-hint" style="display:none;color:red;">Пароль слишком короткий (минимум 8 символов).</div>
+      </div>
+
+      <button type="submit" class="btn">Зарегистрироваться</button>
+    </form>
+
+
+<div id="authProfile" style="display:none; position:relative;">
+
+  <button type="button" id="deleteProfile" class="delete-btn" title="Удалить профиль">Удалить</button>
+
+  <h3>Ваш профиль</h3>
+  <p><strong>ФИО:</strong> <span id="outFullname"></span></p>
+  <p><strong>Телефон:</strong> <span id="outPhone"></span></p>
+  <p><strong>Email:</strong> <span id="outEmail"></span></p>
 </div>
 <script src="script.js"></script>
 
