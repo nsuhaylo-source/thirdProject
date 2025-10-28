@@ -76,26 +76,25 @@ function updatePrice() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const profileBtn   = document.querySelector('.profile'); 
-  const authInfoModal = document.getElementById('authInfoModal');
-  const authInfoClose = document.getElementById('authInfoClose');
+  const authModal = document.getElementById('authModal');
+  const authClose = document.getElementById('authClose');
   const openRegister  = document.getElementById('openRegister');
 
 
   profileBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    authInfoModal.style.display = 'flex';
+    authModal.style.display = 'flex';
+    const user = JSON.parse(localStorage.getItem('user'));
   });
 
 
-  authInfoClose.addEventListener('click', () => {
-    authInfoModal.style.display = 'none';
+  authClose.addEventListener('click', () => {
+    authModal.style.display = 'none';
   });
 
 
   window.addEventListener('click', (e) => {
-    if (e.target === authInfoModal) {
-      authInfoModal.style.display = 'none';
-    }
+    if (e.target === authModal) authModal.style.display = 'none';
   });
 });
 
